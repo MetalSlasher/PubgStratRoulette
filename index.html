@@ -9,19 +9,69 @@
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="animate.css">
         <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="map.js"></script>
+        <script src="zoom_assets/jquery-1.9.1.min.js"></script>
+        <script src="zoom_assets/jquery.smoothZoom.js"></script>
     </head>
-    <body>
+    <script type="text/javascript">
+        jQuery(function($){
+        
+        if($(window).width() > $(window).height()){
+            var map_width_max = ($(window).width() / 2);
+            var map_height_max = $(window).height();
+            var map_width = '99.5%';
+            var map_height = '50%';
+        }else{
+            var map_width_max = $(window).width();
+            var map_height_max = $(window).height() / 2;
+            var map_width = '50%';
+            var map_height = '99.5%';
+        }
+        
+		$('#yourImageID').smoothZoom({			
+			width: map_height,
+			height: map_width,
+            max_WIDTH: map_width_max,
+            max_HEIGHT: map_height_max,
+			pan_BUTTONS_SHOW: "NO",
+			pan_LIMIT_BOUNDARY: "NO",
+			button_SIZE: 24,
+			button_ALIGN: "top right",	
+			zoom_MAX: 200,
+			border_TRANSPARENCY: 20,
+			container: 'zoom_container',
+            
+            animation_SMOOTHNESS: 0.5,
+            animation_SPEED_ZOOM: 0.1,
+            animation_SPEED_PAN: 0.1,
+			
+			/******************************************
+			Enable Responsive settings below if needed.
+			Max width and height values are optional.
+			******************************************/
+			responsive: true,
+			responsive_maintain_ratio: false
+		});	
+});
+    </script>
+    <body id="body" onload="MobilePage()">
 
     <div class="main">
         
     <img src="logo.png" height="auto" width="60%">
     
         
-        <div id="leftsection">
-                <img src="map.jpg" id="map" height="100%" width="100%">
+        <div id="rightsection">
+            <div id="zoom_container" style="float:right;">
+            
+                <img id="yourImageID" src="map/big.jpg" width="5184" height="5184" />
+
+                <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
+                </div>
+            </div>
         </div>
         
-        <div id="rightsection">    
+        <div id="leftsection">    
             <table>
                 <tr>
                     <td>Playing behavior</td><td id="behavior">Playing behavior</td>
@@ -45,14 +95,13 @@
                     <td>Circle entrance</td><td id="circle">Circle entrance</td>
                 </tr>  
                 <tr style="line-height: 100px;">
-                    <td colspan="2"><button onclick="getRandValues()" id="button">Fuck My Shit Up</button></td>
+                    <td colspan="2"><button onclick="getRandValues(),Set_MarkerZoom(1000,1000,'gay')" id="button">Fuck My Shit Up</button></td>
                 </tr>
                  <!--<tr style="line-height: 100px;">
                     <td colspan="2"><a href="map.html">Go to map cancer</a></td>
                 </tr>!--> 
             </table>
         </div>
-    
         
     </div> 
         

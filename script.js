@@ -221,3 +221,10 @@ function getRandom(min,max)
 {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
+function MobilePage()
+{
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) 
+    document.getElementById('main').innerHTML = "<img src='underconstruction.jpg'>";
+}

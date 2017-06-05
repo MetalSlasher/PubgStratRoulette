@@ -1,6 +1,8 @@
 body
 {
     background-image: url(background.png);
+    background-size:cover;
+
     
     /*Make user not be able to select text(because looks shitty)*/
     -webkit-user-select: none; /* Chrome/Safari */        
@@ -67,3 +69,32 @@ button
     //background-color: Transparent;
     //background-repeat:no-repeat;
 }
+
+	.smooth_zoom_preloader {
+		background-image: url(zoom_assets/preloader.gif);
+	}	
+	.smooth_zoom_icons {
+		background-image: url(zoom_assets/icons.png);
+	}
+	#zoom_container .landmarks{
+		position:absolute;
+		z-index:10;	
+		top:0px;
+		left:0px;
+		font-family: Helvetica, Arial, Verdana;
+		font-size:12px;
+		color: #ffffff;
+	}	
+	#zoom_container .landmarks .item {
+		position:absolute;		
+		text-align:center;		
+		display: none;	
+	}	
+	#zoom_container .landmarks .lable div {
+		width: 100px;
+		padding: 4px;		
+	}	
+	#zoom_container .landmarks .mark .text{
+		background-color:#000000;
+		padding:2px 6px;
+	}
