@@ -1,0 +1,69 @@
+body
+{
+    background-image: url(background.png);
+    
+    /*Make user not be able to select text(because looks shitty)*/
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.main
+{
+    margin: 0 auto;
+    width: 65%;
+    background-color: rgba(92,211,250,0.77);
+    text-align: center;
+    font-family: Headliner;
+    font-size: 200%; 
+    overflow: hidden;
+}
+
+#leftsection
+{
+    float: left;
+    width: 60%;
+    margin-left: 1%;
+    
+}
+
+#rightsection
+{
+    float: right;
+    width: 39%;
+}
+
+/*#map
+{
+    border-width: thick;
+}*/
+
+@font-face
+{
+    font-family: Headliner;
+    src: url("Headliner.ttf");
+}
+
+table
+{
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+td:nth-child(2)
+{
+width: 60%;
+}
+
+button
+{
+    font-family: Headliner;
+    font-size: 100%;
+    
+    //background-color: Transparent;
+    //background-repeat:no-repeat;
+}
