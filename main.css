@@ -20,6 +20,8 @@ body
     margin-top: 3%;
     width: 50%;
     background-color: rgba(92,211,250,0.77);
+    /*background-image: url('images/woodtexture.jpg');*/
+    background-size:cover;
     text-align: center;
     font-family: Headliner;
     font-size: 200%;
@@ -48,6 +50,8 @@ body
     border-width: 5%;
     border-style: solid;
     border-color: rgba(92,211,250,0.77);
+    
+    /*border-image: url(images/woodtexture.jpg);*/
 }
 
 @font-face
