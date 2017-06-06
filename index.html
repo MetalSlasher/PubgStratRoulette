@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="animate.css">
         <script type="text/javascript" src="script.js"></script>
-        <script type="text/javascript" src="map.js"></script>
         <script src="zoom_assets/jquery-1.9.1.min.js"></script>
         <script src="zoom_assets/jquery.smoothZoom.js"></script>
     </head>
@@ -17,10 +16,10 @@
         jQuery(function($){
         
         if($(window).width() > $(window).height()){
-            var map_width_max = ($(window).width() / 2);
-            var map_height_max = $(window).height();
-            var map_width = '99.5%';
-            var map_height = '50%';
+            var map_width_max = ($(window).width() / 3);
+            var map_height_max = $(window).height() * 0.8;
+            var map_width = '600px';
+            var map_height = '600px';
         }else{
             var map_width_max = $(window).width();
             var map_height_max = $(window).height() / 2;
@@ -34,12 +33,12 @@
             max_WIDTH: map_width_max,
             max_HEIGHT: map_height_max,
 			pan_BUTTONS_SHOW: "NO",
-			pan_LIMIT_BOUNDARY: "NO",
+			pan_LIMIT_BOUNDARY: "YES",
 			button_SIZE: 24,
 			button_ALIGN: "top right",	
 			zoom_MAX: 200,
 			border_TRANSPARENCY: 20,
-			container: 'zoom_container',
+			container: 'mapsection',
             
             animation_SMOOTHNESS: 0.5,
             animation_SPEED_ZOOM: 0.1,
@@ -53,25 +52,32 @@
 			responsive_maintain_ratio: false
 		});	
 });
+        
+            function Set_MarkerZoom (x_marker,y_marker, markername) {
+        $('#yourImageID').smoothZoom('addLandmark', 
+			[
+			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_marker+','+y_marker+'">\
+				<div>\
+					<div class="text">\
+					<strong>'+markername+'</strong>\
+				</div>\
+				<img src="images/marker.png" width="23px" height="32px" alt="mark 1" />\
+				</div>\
+			</div>'
+			]
+		);
+        
+        $('#yourImageID').smoothZoom('focusTo', {x:x_marker, y:y_marker, zoom:200, speed:0.1});
+    }
     </script>
     <body id="body" onload="MobilePage()">
 
     <div class="main">
         
-    <img src="logo.png" height="auto" width="60%">
-    
+        <img src="logo.png" height="auto" width="60%" align="center" style="margin-top:40px" >
         
-        <div id="rightsection">
-            <div id="zoom_container" style="float:right;">
+        <div id="leftsection">
             
-                <img id="yourImageID" src="map/big.jpg" width="5184" height="5184" />
-
-                <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
-                </div>
-            </div>
-        </div>
-        
-        <div id="leftsection">    
             <table>
                 <tr>
                     <td>Playing behavior</td><td id="behavior">Playing behavior</td>
@@ -95,12 +101,21 @@
                     <td>Circle entrance</td><td id="circle">Circle entrance</td>
                 </tr>  
                 <tr style="line-height: 100px;">
-                    <td colspan="2"><button onclick="getRandValues(),Set_MarkerZoom(1000,1000,'gay')" id="button">Fuck My Shit Up</button></td>
+                    <td colspan="2"><button onclick="getRandValues(),Set_MarkerZoom(3510,4015,'go here')" id="button">Fuck My Shit Up</button></td>
                 </tr>
                  <!--<tr style="line-height: 100px;">
                     <td colspan="2"><a href="map.html">Go to map cancer</a></td>
                 </tr>!--> 
             </table>
+        </div>
+        
+                
+            <div id="mapsection">
+            
+                <img id="yourImageID" src="map/big.jpg" width="5184" height="5184" />
+
+                <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
+                </div>
         </div>
         
     </div> 

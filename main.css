@@ -17,12 +17,12 @@ body
 .main
 {
     margin: 0 auto;
-    width: 65%;
+    margin-top: 3%;
+    width: 50%;
     background-color: rgba(92,211,250,0.77);
     text-align: center;
     font-family: Headliner;
-    font-size: 200%; 
-    overflow: hidden;
+    font-size: 200%;
 }
 
 #leftsection
@@ -35,14 +35,20 @@ body
 
 #rightsection
 {
-    float: right;
-    width: 39%;
+    float: left;
+    width: 100%;
 }
 
-/*#map
+#mapsection
 {
-    border-width: thick;
-}*/
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    transform: translate(510px, -390px);
+    border-width: 5%;
+    border-style: solid;
+    border-color: rgba(92,211,250,0.77);
+}
 
 @font-face
 {
@@ -76,7 +82,7 @@ button
 	.smooth_zoom_icons {
 		background-image: url(zoom_assets/icons.png);
 	}
-	#zoom_container .landmarks{
+	#mapsection .landmarks{
 		position:absolute;
 		z-index:10;	
 		top:0px;
@@ -85,16 +91,16 @@ button
 		font-size:12px;
 		color: #ffffff;
 	}	
-	#zoom_container .landmarks .item {
+	#mapsection .landmarks .item {
 		position:absolute;		
 		text-align:center;		
 		display: none;	
 	}	
-	#zoom_container .landmarks .lable div {
+	#mapsection .landmarks .lable div {
 		width: 100px;
 		padding: 4px;		
 	}	
-	#zoom_container .landmarks .mark .text{
+	#mapsection .landmarks .mark .text{
 		background-color:#000000;
 		padding:2px 6px;
 	}
