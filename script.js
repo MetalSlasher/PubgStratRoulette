@@ -235,6 +235,7 @@ function SetBackground()
     {
 
     document.body.style.backgroundImage = "url('backgroundmobile.jpg')";  
+    document.body.style.width = "100vw";  
     }
     
     
