@@ -15,6 +15,7 @@
     <script type="text/javascript">
         jQuery(function($){
         
+            /*
         if($(window).width() > $(window).height()){
             var map_width_max = ($(window).width() / 3);
             var map_height_max = $(window).height() * 0.8;
@@ -25,7 +26,13 @@
             var map_height_max = $(window).height() / 2;
             var map_width = '50%';
             var map_height = '99.5%';
-        }
+        }*/
+    
+            
+        var map_width = '500px';
+        var map_width_max = $(window).width() / 3;
+        var map_height = '500px';
+        var map_height_max = $(window).height() * 0.8;
         
 		$('#yourImageID').smoothZoom({			
 			width: map_height,
@@ -49,7 +56,7 @@
 			Max width and height values are optional.
 			******************************************/
 			responsive: true,
-			responsive_maintain_ratio: false
+			responsive_maintain_ratio: true
 		});	
 });
         
@@ -76,46 +83,45 @@
         
         <img src="logo.png" height="auto" width="60%" align="center" style="margin-top:40px" >
         
-        <div id="leftsection">
-            
-            <table>
-                <tr>
-                    <td>Playing behavior</td><td id="behavior">Playing behavior</td>
-                </tr>    
-                <tr>
-                    <td>Jumping moment</td><td id="jump">Jumping moment</td>
-                </tr>
-                <tr>
-                    <td>Loot location</td><td id="location">Loot location</td>
-                </tr>   
-                <tr>
-                    <td>Vehicle usage</td><td id="vehicle">Vehicle usage</td>
-                </tr>  
-                <tr>
-                    <td>Weapon choice</td><td id="weapon">Weapon choice</td>
-                </tr>  
-                <tr>
-                    <td>Air drops</td><td id="supply">Air drops</td>
-                </tr>  
-                <tr>
-                    <td>Circle entrance</td><td id="circle">Circle entrance</td>
-                </tr>  
-                <tr style="line-height: 100px;">
-                    <td colspan="2"><button onclick="getRandValues(),Set_MarkerZoom(3510,4015,'go here')" id="button">Fuck My Shit Up</button></td>
-                </tr>
-                 <!--<tr style="line-height: 100px;">
-                    <td colspan="2"><a href="map.html">Go to map cancer</a></td>
-                </tr>!--> 
-            </table>
-        </div>
-        
-                
-            <div id="mapsection">
-            
-                <img id="yourImageID" src="map/big.jpg" width="5184" height="5184" />
+        <div id="content">
+            <div id="leftsection">
 
-                <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
+                <table>
+                    <tr>
+                        <td>Playing behavior</td><td id="behavior">Playing behavior</td>
+                    </tr>    
+                    <tr>
+                        <td>Jumping moment</td><td id="jump">Jumping moment</td>
+                    </tr>
+                    <tr>
+                        <td>Loot location</td><td id="location">Loot location</td>
+                    </tr>   
+                    <tr>
+                        <td>Vehicle usage</td><td id="vehicle">Vehicle usage</td>
+                    </tr>  
+                    <tr>
+                        <td>Weapon choice</td><td id="weapon">Weapon choice</td>
+                    </tr>  
+                    <tr>
+                        <td>Air drops</td><td id="supply">Air drops</td>
+                    </tr>  
+                    <tr>
+                        <td>Circle entrance</td><td id="circle">Circle entrance</td>
+                    </tr>  
+                    <tr style="line-height: 100px;">
+                        <td colspan="2"><button onclick="getRandValues(),Set_MarkerZoom(3510,4015,'go here')" id="button">Fuck My Shit Up</button></td>
+                    </tr>
+                     <!--<tr style="line-height: 100px;">
+                        <td colspan="2"><a href="map.html">Go to map cancer</a></td>
+                    </tr>!--> 
+                </table>
+            </div>
+            <div id="rightsection">  
+                <div id="mapsection">
+                    <img id="yourImageID" src="map/big.jpg"/>
+                    <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true"/>
                 </div>
+            </div>
         </div>
         
     </div> 

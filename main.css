@@ -3,7 +3,7 @@ body
     background-image: url(background.png);
     background-size:cover;
     
-    height: 100vh;
+    height: 100%;
     
     /*can be added at this point again when the map positioning gets fixed*/
     /*width: 100vw;*/
@@ -21,39 +21,44 @@ body
 .main
 {
     margin: 0 auto;
-    margin-top: 3%;
     width: 50%;
     background-color: rgba(92,211,250,0.77);
+    overflow: auto;
     /*background-image: url('images/woodtexture.jpg');*/
-    background-size:cover;
+    /*background-size:cover;*/
     text-align: center;
     font-family: Headliner;
     font-size: 200%;
 }
 
+#content
+{
+    padding-top: 5%;
+}
+
 #leftsection
 {
     float: left;
-    width: 60%;
-    margin-left: 1%;
-    
+    width: 50%;
 }
 
 #rightsection
 {
-    float: left;
-    width: 100%;
+    float: right;
+    width: 49%;
+    padding-bottom: 1%;
+    padding-right: 1%;
 }
 
 #mapsection
 {
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    transform: translate(510px, -390px);
+    /*position: fixed;*/
+    /*min-width: 500px;
+    min-height: 500px;*/
+    /*transform: translate(510px, -390px);
     border-width: 5%;
     border-style: solid;
-    border-color: rgba(92,211,250,0.77);
+    border-color: rgba(92,211,250,0.77);*/
     
     /*border-image: url(images/woodtexture.jpg);*/
 }
@@ -80,8 +85,8 @@ button
     font-family: Headliner;
     font-size: 100%;
     
-    //background-color: Transparent;
-    //background-repeat:no-repeat;
+    /*background-color: Transparent;
+    background-repeat:no-repeat;*/
 }
 
 	.smooth_zoom_preloader {
