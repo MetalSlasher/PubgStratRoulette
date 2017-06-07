@@ -4,8 +4,7 @@ body
     background-size:cover;
     
     height: 100vh;
-    width: 100vh;
-
+    width: 100vw;
     
     /*Make user not be able to select text(because looks shitty)*/
     -webkit-user-select: none; /* Chrome/Safari */        
