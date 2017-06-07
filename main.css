@@ -2,6 +2,8 @@ body
 {
     background-image: url(background.png);
     background-size:cover;
+    
+    height: 100vh;
 
     
     /*Make user not be able to select text(because looks shitty)*/

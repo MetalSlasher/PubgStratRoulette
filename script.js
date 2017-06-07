@@ -222,14 +222,21 @@ function getRandom(min,max)
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-function MobilePage()
+function SetBackground()
 {
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) 
-{
-        
-document.body.style.backgroundImage = "url('backgroundmobile.jpg')";
     
-}
+    if((new Date().getHours()) <= 6 && (new Date().getHours()) >= 20) 
+    {
+       document.body.style.backgroundImage = "url('backgroundnight.png')";  
+    }
+
+
+    else if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) 
+    {
+
+    document.body.style.backgroundImage = "url('backgroundmobile.jpg')";  
+    }
+    
+    
     
 }
