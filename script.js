@@ -202,18 +202,20 @@ var circle = document.getElementById("circle");
         circle.classList.remove("animated flip");  
         
     }
-   
+
+var animationToUse = "animated " + "flip";    
+var animationToUse2 = "animated " + "flip";    
     
-behavior.className="animated flip";
-jump.className="animated flip";
-location.className="animated flip";
-vehicle.className="animated flip";
-supply.className="animated flip";
-weapon.className="animated flip";   
-circle.className="animated flip";  
-   
-  
+/* flip, zoomIn, zoomOut, rubberBand, tada, wobble, jello */
     
+behavior.className = animationToUse;
+jump.className = animationToUse2;
+location.className = animationToUse;
+vehicle.className = animationToUse2;
+supply.className = animationToUse;
+weapon.className = animationToUse2;   
+circle.className = animationToUse;  
+       
 }
 
 
