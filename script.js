@@ -237,6 +237,9 @@ function SetBackground()
     {
     document.body.style.backgroundImage = "url('backgroundmobile.jpg')";  
     document.body.style.width = "100vw";  
+    document.getElementById("main").style.width="90%";
+    document.getElementById("main").style.height="90vh";
+
     }
     
     
