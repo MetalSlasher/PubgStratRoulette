@@ -1,0 +1,128 @@
+body
+{
+    background-image: url(background.png);
+    background-size:cover;
+    
+    height: 100%;
+    
+    /*can be added at this point again when the map positioning gets fixed*/
+    /*width: 100vw;*/
+    
+    /*Make user not be able to select text(because looks shitty)*/
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.main
+{
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgba(92,211,250,0.77);
+    overflow: auto;
+    /*background-image: url('images/woodtexture.jpg');*/
+    /*background-size:cover;*/
+    text-align: center;
+    font-family: Headliner;
+    font-size: 200%;
+}
+
+#content
+{
+    padding-top: 5%;
+}
+
+#leftsection
+{
+    float: left;
+    width: 50%;
+}
+
+#rightsection
+{
+    float: right;
+    width: 49%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+}
+
+#mapsection
+{
+    /*position: fixed;*/
+    /*min-width: 500px;
+    min-height: 500px;*/
+    /*transform: translate(510px, -390px);
+    border-width: 5%;
+    border-style: solid;
+    border-color: rgba(92,211,250,0.77);*/
+    
+    /*border-image: url(images/woodtexture.jpg);*/
+}
+
+@font-face
+{
+    font-family: Headliner;
+    src: url("Headliner.ttf");
+}
+
+table
+{
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+td:nth-child(2)
+{
+width: 60%;
+}
+
+button
+{
+    font-family: Headliner;
+    font-size: 100%;
+    background-color: rgba(251,167,39,1);
+    border-style: inset;
+    border-width: thin;
+    border-color: rgba(255,170,40,1);
+    
+    /*background-color: Transparent;
+    background-repeat:no-repeat;*/
+}
+
+button:hover
+{
+    background-color: rgba(255,190,0,1); 
+}
+
+	.smooth_zoom_preloader {
+		background-image: url(zoom_assets/preloader.gif);
+	}	
+	.smooth_zoom_icons {
+		background-image: url(zoom_assets/icons.png);
+	}
+	#mapsection .landmarks{
+		position:absolute;
+		z-index:10;	
+		top:0px;
+		left:0px;
+		font-family: Helvetica, Arial, Verdana;
+		font-size:12px;
+		color: #ffffff;
+	}	
+	#mapsection .landmarks .item {
+		position:absolute;		
+		text-align:center;		
+		display: none;	
+	}	
+	#mapsection .landmarks .lable div {
+		width: 100px;
+		padding: 4px;		
+	}	
+	#mapsection .landmarks .mark .text{
+		background-color:#000000;
+		padding:2px 6px;
+	}

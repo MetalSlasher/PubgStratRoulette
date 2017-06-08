@@ -226,23 +226,32 @@ function getRandom(min,max)
 function SetBackground()
 {
     
-    if((new Date().getHours()) <= 6 || (new Date().getHours()) >= 20) 
+    
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) 
+    {
+    
+        /*
+    document.body.style.backgroundImage = "url('backgroundmobile.jpg')";  
+    document.body.style.width = "100vw";  
+    document.getElementById("main").style.width="90%";
+    document.getElementById("main").style.height="90vh";
+    */        
+        
+    var fileref = document.createElement("link");
+    fileref.rel = "stylesheet";
+    fileref.type = "text/css";
+    fileref.href = "mobile.css";
+    document.getElementsByTagName("head")[0].appendChild(fileref)
+    head.appendChild(s);
+    
+    }
+    
+    else if((new Date().getHours()) <= 6 || (new Date().getHours()) >= 20) 
     {
         document.body.style.backgroundImage = "url('backgroundnight.png')";  
         document.getElementById("main").style.backgroundColor="rgba(27,15,25,0.77)";
         document.getElementById("main").style.color="#FFFFFF";
     }
 
-
-    else if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) 
-    {
-    document.body.style.backgroundImage = "url('backgroundmobile.jpg')";  
-    document.body.style.width = "100vw";  
-    document.getElementById("main").style.width="90%";
-    document.getElementById("main").style.height="90vh";
-
-    }
-    
-    
     
 }
