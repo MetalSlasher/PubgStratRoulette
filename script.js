@@ -204,16 +204,15 @@ var circle = document.getElementById("circle");
     }
 
 var animationToUse = "animated " + "flip";    
-var animationToUse2 = "animated " + "flip";    
     
 /* flip, zoomIn, zoomOut, rubberBand, tada, wobble, jello */
     
 behavior.className = animationToUse;
-jump.className = animationToUse2;
+jump.className = animationToUse;
 location.className = animationToUse;
-vehicle.className = animationToUse2;
+vehicle.className = animationToUse;
 supply.className = animationToUse;
-weapon.className = animationToUse2;   
+weapon.className = animationToUse;   
 circle.className = animationToUse;  
        
 }

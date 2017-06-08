@@ -84,9 +84,18 @@ button
 {
     font-family: Headliner;
     font-size: 100%;
+    background-color: rgba(251,167,39,1);
+    border-style: inset;
+    border-width: thin;
+    border-color: rgba(255,170,40,1);
     
     /*background-color: Transparent;
     background-repeat:no-repeat;*/
+}
+
+button:hover
+{
+    background-color: rgba(255,190,0,1); 
 }
 
 	.smooth_zoom_preloader {
