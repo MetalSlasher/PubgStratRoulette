@@ -1,4 +1,8 @@
+/* GLOBAL VARIABLE SPACE */
+
 var timer;
+
+/* END OF GLOBAL VARIABLE SPACE */
 
 function getRandValues()
 {
