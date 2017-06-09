@@ -26,6 +26,9 @@ function getLocation()
 {
    
 var location = new Array();
+var coordX = new Array();    
+var coordY = new Array();    
+    
 location[1] = "Primorsk"; /*coords: 1030, 3390 */
 location[2] = "Pier Town"; /*coords: 1800, 3600 */
 location[3] = "Mylta"; /*coords: 3800, 3070 */
@@ -49,10 +52,59 @@ location[20] = "Villa"; /*coords: 3965, 1920 */
 location[21] = "Shooting Range"; /*coords: 2170, 1075 */
 location[22] = "Hospital"; /*coords: 970, 2020 */
     
+coordX[2] = "1800";
+coordX[1] = "1030";
+coordX[3] = "3800";
+coordX[4] = "3920";
+coordX[5] = "1395";
+coordX[6] = "2570";
+coordX[7] = "3450";
+coordX[8] = "1330";
+coordX[9] = "4530";
+coordX[10] = "4600";
+coordX[11] = "735";
+coordX[12] = "3630";
+coordX[13] = "2440";
+coordX[14] = "2690";
+coordX[15] = "2860";
+coordX[16] = "3510";
+coordX[17] = "2050";
+coordX[18] = "3995";
+coordX[19] = "3825";
+coordX[20] = "3965";
+coordX[21] = "2170";
+coordX[22] = "970";
+
+coordY[1] = "3390";
+coordY[2] = "3600";
+coordY[3] = "3070";
+coordY[4] = "3880";
+coordY[5] = "2525";
+coordY[6] = "1895";
+coordY[7] = "1530";
+coordY[8] = "1750";
+coordY[9] = "1200";
+coordY[10] = "2820";
+coordY[11] = "845";
+coordY[12] = "825";
+coordY[13] = "785";
+coordY[14] = "2080";
+coordY[15] = "3980";
+coordY[16] = "4015";
+coordY[17] = "2020";
+coordY[18] = "2385";
+coordY[19] = "2520";
+coordY[20] = "1920";
+coordY[21] = "1075";
+coordY[22] = "2020";
+    
 var randNumber = getRandom(1,22);
 var randLocation = location[randNumber];
      
 document.getElementById("location").innerHTML=randLocation;
+    
+    
+Set_MarkerZoom(coordX[randNumber],coordY[randNumber],'here');
     
 }
 
@@ -69,6 +121,9 @@ var randNumber = getRandom(1,3);
 var randBehavior = behavior[randNumber];
      
 document.getElementById("behavior").innerHTML=randBehavior;  
+    
+    
+/*return coord[randNumber];*/
 }
 
 function getJump()
@@ -238,5 +293,71 @@ function SetBackground()
         document.getElementById("main").style.color="#FFFFFF";
     }
 
+}
+
+
+jQuery(function($)
+       {
+        
+            /*
+        if($(window).width() > $(window).height()){
+            var map_width_max = ($(window).width() / 3);
+            var map_height_max = $(window).height() * 0.8;
+            var map_width = '600px';
+            var map_height = '600px';
+        }else{
+            var map_width_max = $(window).width();
+            var map_height_max = $(window).height() / 2;
+            var map_width = '50%';
+            var map_height = '99.5%';
+        }*/
     
+            
+        var map_width = '500px';
+        var map_width_max = $(window).width() / 3;
+        var map_height = '500px';
+        var map_height_max = $(window).height() * 0.8;
+        
+		$('#yourImageID').smoothZoom({			
+			width: map_height,
+			height: map_width,
+            max_WIDTH: map_width_max,
+            max_HEIGHT: map_height_max,
+			pan_BUTTONS_SHOW: "NO",
+			pan_LIMIT_BOUNDARY: "YES",
+			button_SIZE: 24,
+			button_ALIGN: "top right",	
+			zoom_MAX: 200,
+			border_TRANSPARENCY: 20,
+			container: 'mapsection',
+            
+            animation_SMOOTHNESS: 0.5,
+            animation_SPEED_ZOOM: 0.1,
+            animation_SPEED_PAN: 0.1,
+			
+			/******************************************
+			Enable Responsive settings below if needed.
+			Max width and height values are optional.
+			******************************************/
+			responsive: true,
+			responsive_maintain_ratio: true
+		});	
+    });
+        
+function Set_MarkerZoom (x_marker,y_marker, markername) 
+{       
+        $('#yourImageID').smoothZoom('addLandmark', 
+			[
+			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_marker+','+y_marker+'">\
+				<div>\
+					<div class="text">\
+					<strong>'+markername+'</strong>\
+				</div>\
+				<img src="images/marker.png" width="23px" height="32px" alt="mark 1" />\
+				</div>\
+			</div>'
+			]
+		);
+        
+        $('#yourImageID').smoothZoom('focusTo', {x:x_marker, y:y_marker, zoom:200, speed:0.1});
 }
