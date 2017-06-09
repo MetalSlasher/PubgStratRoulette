@@ -24,32 +24,30 @@ body
     margin: 0 auto;
     width: 90%;
     height: 90vh;
-    background-color: rgba(92,211,250,0.77);
+    /*background-color: rgba(92,211,250,0.77);*/
     overflow: auto;
     /*background-image: url('images/woodtexture.jpg');*/
     /*background-size:cover;*/
     text-align: center;
     font-family: Headliner;
-    font-size: 200%;
+    font-size: 320%;
 }
 
 #content
 {
-    padding-top: 5%;
 }
 
-#leftsection
+#uppersection
 {
-    float: left;
-    width: 50%;
+    /*float: left;
+    width: 50%;*/
 }
 
-#rightsection
+#undersection
 {
-    float: right;
-    width: 49%;
-    padding-bottom: 1%;
-    padding-right: 1%;
+   /* float: right;
+    width: 49%;*/
+    width 100%;
 }
 
 #mapsection
