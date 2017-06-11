@@ -154,8 +154,6 @@ function Countdown(randJump)
     clearCountdown(timer);
     //document.getElementById("jump").textContent = "";        
 
-
-    
     
     timer = setInterval(function()
     {
@@ -165,8 +163,11 @@ function Countdown(randJump)
     if(randJump <= 0)
         clearCountdown(timer);
         
-    if(timeleft==0)
-            document.getElementById("jump").textContent = "JUMP!";        
+    if(randJump==0)
+        {
+            document.getElementById("jump").textContent = "JUMP NOW!";
+            document.getElementById("jump").className = "animated flash";   
+        }
     },1000);
     
 }
