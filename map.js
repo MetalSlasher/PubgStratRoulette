@@ -45,7 +45,8 @@
 		});	
 });
         
-            function Set_MarkerZoom (x_marker,y_marker, markername) {
+function Set_MarkerZoom (x_marker,y_marker, markername) 
+{
         $('#yourImageID').smoothZoom('addLandmark', 
 			[
 			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_marker+','+y_marker+'">\
@@ -60,4 +61,4 @@
 		);
         
         $('#yourImageID').smoothZoom('focusTo', {x:x_marker, y:y_marker, zoom:200, speed:0.1});
-    }
+}
