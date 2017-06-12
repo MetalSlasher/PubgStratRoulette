@@ -44,19 +44,23 @@ body
     -ms-user-select: none;
 }
 
-#uppersection
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) 
 {
-   float: left;
-    width: 50%;
-}
+      #uppersection
+    {
+        float: left;
+        width: 50%;
+    }
 
 
-#undersection
-{
-    float: right;
-    width: 42%;
-
-
+    #undersection
+    {
+        float: right;
+        width: 42%;
+    }
+  
+    
 }
    
 
