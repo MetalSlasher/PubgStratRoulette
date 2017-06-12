@@ -290,8 +290,11 @@ function SetMobileBackground()
     if((new Date().getHours()) <= 6 || (new Date().getHours()) >= 20) 
     {
         document.body.style.backgroundImage = "url('backgroundmobilenight.png')";  
-        document.getElementById("main").style.backgroundColor="rgba(27,15,25,0.77)";
+        /*document.getElementById("main").style.backgroundColor="rgba(27,15,25,0.77)";*/
+        document.getElementById("main").style.backgroundColor="transparent";
         document.getElementById("main").style.color="#FFFFFF";
+        /*document.getElementById("main").style.width="100%";*/
+
     }
 
 }
