@@ -221,9 +221,10 @@ function getSupply()
     var supply = new Array();
     supply[1] = "Always";
     supply[2] = "Never";
-    supply[3] = "Normal";
+    supply[3] = "Occasionally";
+    supply[4] = "Once";
 
-    var randNumber = getRandom(1,3);
+    var randNumber = getRandom(1,4);
     var randSupply = supply[randNumber];
     
     document.getElementById("supply").innerHTML=randSupply;  
