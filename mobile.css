@@ -30,7 +30,7 @@ body
     /*background-size:cover;*/
     text-align: center;
     font-family: Headliner;
-    font-size: 320%;
+    font-size: 200%;
 }
 
 
@@ -75,8 +75,13 @@ body
     
     table
     {
-    margin: 0 auto;
-    padding-top: 5%;
+        margin: 0 auto;
+        padding-top: 5%;
+    }
+    
+    .main
+    {
+        height: 90vh;
     }
     
 }
@@ -97,6 +102,11 @@ body
         width: 42%;
         float: right;
     }  
+    
+    #logo
+    {
+        width: 25%;
+    }
     
     
     table
