@@ -1,6 +1,7 @@
 /* GLOBAL VARIABLE SPACE */
 
 var timer;
+var markerID=0;
 
 /* END OF GLOBAL VARIABLE SPACE */
 
@@ -12,6 +13,10 @@ function getRandValues()
     button = document.getElementById("button");
     setTimeout(function(){button.click()},500);
     
+    
+    $('.landmarks').empty();
+    $('#yourImageID').smoothZoom('refreshAllLandmarks');
+    
     getBehavior();
     getLocation();
     getVehicle();
@@ -19,6 +24,9 @@ function getRandValues()
     getSupply();
     getCircle();
     getJump();
+    
+
+    
 }
 
 
@@ -103,8 +111,9 @@ var randLocation = location[randNumber];
      
 document.getElementById("location").innerHTML=randLocation;
     
-    
-Set_MarkerZoom(coordX[randNumber],coordY[randNumber],'here');
+$('#yourImageID').smoothZoom('Reset');
+setTimeout(function(){Set_MarkerZoom(coordX[randNumber],coordY[randNumber],'here');},200);
+
     
 }
 
@@ -330,9 +339,9 @@ jQuery(function($)
     
             
         var map_width = '500px';
-        var map_width_max = $(window).width() / 3;
+        /*var map_width_max = $(window).width() / 3;*/
         var map_height = '500px';
-        var map_height_max = $(window).height() * 0.8;
+        /*var map_height_max = $(window).height() * 0.8;*/
         
 		$('#yourImageID').smoothZoom({			
 			width: map_height,
@@ -343,13 +352,13 @@ jQuery(function($)
 			pan_LIMIT_BOUNDARY: "YES",
 			button_SIZE: 24,
 			button_ALIGN: "top right",	
-			zoom_MAX: 200,
+			zoom_MAX: 1,
 			border_TRANSPARENCY: 20,
 			container: 'mapsection',
             
-            animation_SMOOTHNESS: 0.5,
-            animation_SPEED_ZOOM: 0.1,
-            animation_SPEED_PAN: 0.1,
+            animation_SMOOTHNESS: 0.9,
+            animation_SPEED_ZOOM: 0.7,
+            animation_SPEED_PAN: 0.5,
 			
 			/******************************************
 			Enable Responsive settings below if needed.
@@ -359,21 +368,25 @@ jQuery(function($)
 			responsive_maintain_ratio: true
 		});	
     });
+
+
         
 function Set_MarkerZoom (x_marker,y_marker, markername) 
 {       
+        
         $('#yourImageID').smoothZoom('addLandmark', 
 			[
-			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_marker+','+y_marker+'">\
+			'<div class="item mark" id="' + markerID +  '"data-show-at-zoom="0" data-position="'+x_marker+','+y_marker+'">\
 				<div>\
 					<div class="text">\
 					<strong>'+markername+'</strong>\
 				</div>\
-				<img src="images/marker.png" width="23px" height="32px" alt="mark 1" />\
+				<img src="images/marker.png width="23px" height="32px" alt="mark 1" />\
 				</div>\
 			</div>'
 			]
 		);
         
-        $('#yourImageID').smoothZoom('focusTo', {x:x_marker, y:y_marker, zoom:200, speed:0.1});
+        $('#yourImageID').smoothZoom('focusTo', {x:x_marker, y:y_marker, zoom:1, speed:2});
+    
 }

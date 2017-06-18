@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="animate.css">
  
         <!-- Favicon Assets Loading for all platforms (Keep files in root directory = Best practice)   !-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,35 +43,47 @@
         <div id="content">
             <div id="leftsection">
 
-                <table>
+                <table id="maintable">
                     <tr>
-                        <td>Playing behavior</td><td id="behavior">Playing behavior</td>
+                        <td><img src="images/behavioricon.png" width="40px" height="40px"></td><td id="behaviortd">Playing behavior</td><td id="behavior">Playing behavior</td>
                     </tr>    
                     <tr>
-                        <td>Jumping moment</td><td id="jump">Jumping moment</td>
+                        <td><img src="images/jumpicon.png"  width="40px" height="40px"></td><td>Jumping moment</td><td id="jump">Jumping moment</td>
                     </tr>
                     <tr>
-                        <td>Loot location</td><td id="location">Loot location</td>
+                        <td><img src="images/locationicon.png"  width="40px" height="40px"></td><td>Loot location</td><td id="location">Loot location</td>
                     </tr>   
                     <tr>
-                        <td>Vehicle usage</td><td id="vehicle">Vehicle usage</td>
+                        <td><img src="images/vehicleicon.png"  width="40px" height="40px"></td><td>Vehicle usage</td><td id="vehicle">Vehicle usage</td>
                     </tr>  
                     <tr>
-                        <td>Weapon choice</td><td id="weapon">Weapon choice</td>
+                        <td><img src="images/weaponicon.png"  width="40px" height="40px"></td><td>Weapon choice</td><td id="weapon">Weapon choice</td>
                     </tr>  
                     <tr>
-                        <td>Air drops</td><td id="supply">Air drops</td>
+                        <td><img src="images/jumpicon.png"  width="40px" height="40px"></td><td>Air drops</td><td id="supply">Air drops</td>
                     </tr>  
                     <tr>
-                        <td>Circle entrance</td><td id="circle">Circle entrance</td>
+                        <td><img src="images/locationicon.png"  width="40px" height="40px"></td><td>Circle entrance</td><td id="circle">Circle entrance</td>
                     </tr>  
                     <tr style="line-height: 100px;">
-                        <td colspan="2"><button onclick="getRandValues()" id="button">GENERATE<img src="generate.png" width="25px" height="25px"></button></td>
+                        <td colspan="3"><button onclick="getRandValues()" id="button">GENERATE<img src="generate.png" width="25px" height="25px"></button></td>
                     </tr>
                      <!--<tr style="line-height: 100px;">
                         <td colspan="2"><a href="map.html">Go to map cancer</a></td>
                     </tr>!--> 
                 </table>
+                <!--<details>
+                    <summary>BONUS STRATEGIES</summary>
+                    
+                     <table id="bonustable">
+                    <tr>
+                        <td id="bonus1">AFK Killing</td>
+                    </tr>    
+                    <tr>
+                      <td id="bonus2">No Shooting</td>
+                    </tr>
+                </table>
+                </details>!-->
             </div>
             <div id="rightsection">  
                 <div id="mapsection">

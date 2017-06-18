@@ -131,11 +131,29 @@ table
 {
     margin: 0 auto;
     padding-top: 0%;
+    width: 80%;
+}
+
+td:nth-child(1)
+{
+width: 10%;
 }
 
 td:nth-child(2)
 {
-width: 60%;
+width: 40%;
+text-align: left;
+}
+
+td:nth-child(3)
+{
+width: 50%;
+text-align: center;
+}
+
+td
+{
+    vertical-align: middle;
 }
 
 button

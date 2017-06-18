@@ -28,7 +28,7 @@ body
     /*background-size:cover;*/
     text-align: center;
     font-family: Headliner;
-    font-size: 200%;
+    font-size: 175%;
 }
 
 
@@ -63,16 +63,10 @@ body
 
 #mapsection
 {
-    /*position: fixed;*/
-    /*min-width: 500px;
-    min-height: 500px;*/
-    /*transform: translate(510px, -390px);
-    border-width: 5%;
-    border-style: solid;
-    border-color: rgba(92,211,250,0.77);*/
-    
-    /*border-image: url(images/woodtexture.jpg);*/
+   /* min-width: 1000px;
+    min-height: 1000px;*/
 }
+
 
 @font-face
 {
@@ -86,10 +80,28 @@ table
     padding-top: 5%;
 }
 
+td:nth-child(1)
+{
+width: 10%;
+}
+
 td:nth-child(2)
 {
-width: 60%;
+width: 40%;
+text-align: left;
 }
+
+td:nth-child(3)
+{
+width: 50%;
+text-align: center;
+}
+
+td
+{
+    vertical-align: middle;
+}
+
 
 button
 {
@@ -102,6 +114,12 @@ button
     
     /*background-color: Transparent;
     background-repeat:no-repeat;*/
+}
+
+details
+{
+    text-align: left;
+    margin-left: 5%;
 }
 
 button:hover
