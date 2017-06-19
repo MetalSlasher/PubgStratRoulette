@@ -340,8 +340,10 @@ jQuery(function($)
     
             
         var map_width = '500px';
+        var map_width_max = '500px';
         /*var map_width_max = $(window).width() / 3;*/
         var map_height = '500px';
+        var map_height_max = '500px';
         /*var map_height_max = $(window).height() * 0.8;*/
         
 		$('#yourImageID').smoothZoom({			
