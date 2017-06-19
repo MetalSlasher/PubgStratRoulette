@@ -75,6 +75,7 @@ body
     #mapsection
     {    
     display:inline-block;
+    width: 100vw;
     /*position: fixed;*/
     /*min-width: 500px;
     min-height: 500px;*/
