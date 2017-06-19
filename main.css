@@ -1,7 +1,10 @@
 body
 {
-    background-image: url(background.png);
-    background-size:cover;
+    background: url(background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     
     height: 100%;
     
@@ -21,7 +24,7 @@ body
 .main
 {
     margin: 0 auto;
-    width: 50%;
+    width: 55%;
     background-color: rgba(92,211,250,0.77);
     overflow: auto;
     /*background-image: url('images/woodtexture.jpg');*/
