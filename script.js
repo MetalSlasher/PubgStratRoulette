@@ -127,9 +127,10 @@ var behavior = new Array();
 behavior[1] = "Offensive";
 behavior[2] = "Defensive";
 behavior[3] = "Normal";
+behavior[4] = "Ultra Campy";
 
     
-var randNumber = getRandom(1,3);
+var randNumber = getRandom(1,4);
 var randBehavior = behavior[randNumber];
      
 document.getElementById("behavior").innerHTML=randBehavior;  
@@ -194,7 +195,7 @@ function getVehicle()
     var vehicle = new Array();
     vehicle[1] = "Always";
     vehicle[2] = "Never";
-    vehicle[3] = "Normal";
+    vehicle[3] = "Occasionally";
     
     var randNumber = getRandom(1,3);
     var randVehicle = vehicle[randNumber];
