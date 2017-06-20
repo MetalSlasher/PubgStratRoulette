@@ -59,6 +59,7 @@ location[19] = "Bunkers";
 location[20] = "Villa"; /*coords: 3965, 1920 */
 location[21] = "Shooting Range"; /*coords: 2170, 1075 */
 location[22] = "Hospital"; /*coords: 970, 2020 */
+location[23] = "Pochinki"; /*coords: 2320, 2600 */
     
 coordX[2] = "1800";
 coordX[1] = "1030";
@@ -82,6 +83,7 @@ coordX[19] = "3825";
 coordX[20] = "3965";
 coordX[21] = "2170";
 coordX[22] = "970";
+coordX[23] = "2320";
 
 coordY[1] = "3390";
 coordY[2] = "3600";
@@ -105,8 +107,9 @@ coordY[19] = "2520";
 coordY[20] = "1920";
 coordY[21] = "1075";
 coordY[22] = "2020";
+coordY[23] = "2600";
     
-var randNumber = getRandom(1,22);
+var randNumber = getRandom(1,23);
 var randLocation = location[randNumber];
      
 document.getElementById("location").innerHTML=randLocation;
@@ -223,8 +226,9 @@ function getSupply()
     supply[2] = "Never";
     supply[3] = "Occasionally";
     supply[4] = "Once";
+    supply[5] = "When Nearby";
 
-    var randNumber = getRandom(1,4);
+    var randNumber = getRandom(1,5);
     var randSupply = supply[randNumber];
     
     document.getElementById("supply").innerHTML=randSupply;  
