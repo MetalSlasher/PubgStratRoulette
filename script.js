@@ -322,6 +322,9 @@ function SetBackground()
         document.body.style.backgroundImage = "url('backgroundnight.png')";  
         document.getElementById("main").style.backgroundColor="rgba(27,15,25,0.77)";
         document.getElementById("main").style.color="#FFFFFF";
+        
+         var metaThemeColor = document.querySelector("meta[name=theme-color]");
+            metaThemeColor.setAttribute("content","rgba(27,15,25,0.77)" );
     }
 
 }
