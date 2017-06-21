@@ -37,7 +37,7 @@ var location = new Array();
 var coordX = new Array();    
 var coordY = new Array();    
     
-location[1] = "Primorsk"; /*coords: 1030, 3390 */
+location[1] = "Primorsk"; /*coords: 1020, 3860 */
 location[2] = "Pier Town"; /*coords: 1800, 3600 */
 location[3] = "Mylta"; /*coords: 3800, 3070 */
 location[4] = "Novorepnoye"; /*coords: 3920, 3880 */
@@ -60,9 +60,9 @@ location[20] = "Villa"; /*coords: 3965, 1920 */
 location[21] = "Shooting Range"; /*coords: 2170, 1075 */
 location[22] = "Hospital"; /*coords: 970, 2020 */
 location[23] = "Pochinki"; /*coords: 2320, 2600 */
-    
+
+coordX[1] = "1020";
 coordX[2] = "1800";
-coordX[1] = "1030";
 coordX[3] = "3800";
 coordX[4] = "3920";
 coordX[5] = "1395";
@@ -85,7 +85,7 @@ coordX[21] = "2170";
 coordX[22] = "970";
 coordX[23] = "2320";
 
-coordY[1] = "3390";
+coordY[1] = "3860";
 coordY[2] = "3600";
 coordY[3] = "3070";
 coordY[4] = "3880";
